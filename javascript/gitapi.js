@@ -1,8 +1,3 @@
-
-
-
-
-
 var cars = ["Bentley", "Mercedes", "Porsche", "Ferrari"];
 
       
