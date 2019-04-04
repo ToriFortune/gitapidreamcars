@@ -41,7 +41,7 @@ var cars = ["Bentley", "Mercedes", "Porsche", "Ferrari"];
 
 function displayCarName() {
   var car = $(this).attr("data-name");
-  var queryUrl = "https://api.giphy.com/v1/gifs/search? /v1/gifs/search/?q=" + car + "&api_key=NI69UQ9EUpFtFNnCcZcCPQrHAuL2BLwy";
+  var queryURL = "https://api.giphy.com/v1/gifs/search? /v1/gifs/search/?q=" + car + "&api_key=NI69UQ9EUpFtFNnCcZcCPQrHAuL2BLwy";
 
   $.ajax({
     url: queryURL,
@@ -59,7 +59,7 @@ function alertCarName() {
   alert(carName);
 }
 
-$(document).on('click', '.car', displayCarName);
+
 function renderButtons() {
   // to remove btns before adding a new btn for new value of car inputed
 
@@ -93,11 +93,11 @@ $("#add-car").on("click", function (event) {
 
 
   cars.push(car);
-
+ 
   // Calling renderButtons to show car array
   renderButtons();
 
 });
-
+$(document).on("click", ".cars", displayCarName);
 //Call renderbuttons to show buttons on initial load
 renderButtons();
